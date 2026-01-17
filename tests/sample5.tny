@@ -1,0 +1,9 @@
+read x;
+read n;
+result := 1;
+repeat
+    result := result * x;
+    n := n - 1;
+until n == 0;
+write result;
+end
