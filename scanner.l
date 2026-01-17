@@ -1,3 +1,6 @@
+/*TODO: This is the scanner for the compiler, written in lex. */
+%option yylineno
+
 %{
 #include "parser.tab.h"
 
@@ -65,7 +68,7 @@ comment     \{[^}]*\}
 
 
 . {
-    fprintf(stderr, "unknown character: %s\n", yytext);
+    fprintf(stderr, "unknown character at %d line: %s\n", yylineno,  yytext);
     return 0;
 }
 

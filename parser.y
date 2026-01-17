@@ -1,3 +1,5 @@
+/* TODO: This is the parser, having the grammar rules for the language. */
+
 %code requires {
   #include "ast.h"
 }
@@ -8,12 +10,16 @@
 #include <stdlib.h>
 #include "ast.h"
 
+extern int yychar;
+extern int yylineno;
+extern char *yytext;
 extern int yylex();
 void yyerror(const char *s);
 
 astnode *root;
 %}
 
+%define parse.error verbose
 /* YYSTYPE */
 %union {
     int num;
@@ -92,6 +98,9 @@ factor
 %%
 
 void yyerror(const char *s) {
-    fprintf(stderr, "Parse error: %s\n", s);
+    if(!yychar) fprintf(stderr, "Syntax error at line: %d. Unexpected EOF.", yylineno);
+    else fprintf(stderr, "Syntax error at line: %d near: %s\n", yylineno-1, yytext);
 }
+
+
 
