@@ -1,8 +1,0 @@
-read n;
-sum := 0;
-repeat
-    sum := sum + n;
-    n := n - 1;
-until n == 0;
-write sum;
-end
