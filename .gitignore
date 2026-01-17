@@ -1,0 +1,9 @@
+a.out
+tinyc
+parser.tab.c
+parser.tab.h
+parser.output
+lex.yy.c
+y.tab.h
+y.tab.c
+
