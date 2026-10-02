@@ -1,19 +1,18 @@
 This is a compiler for the language: TINY, a subset of C.
-Documenation:
 
-Documentation of TINY:
+Documentation of TINY
 Every line is to be terminated with a semicolon. (;).
-The program needs to be terminated with the keyword "end". A semicolon must not be placed after this keyword.
+The program needs to be terminated with the keyword "end". The "end" keyword must not be followed by a semicolon.
 Variables are declared by assigning values to them directly. They are block scoped. Each block is defined by an indentation, preferably using tab space for each block.
 
-Syntax:
-input: read
-output: write
-if statements: if <statement> then <code> end
-if-else statements: if <statement> then <code> else <code> end
-loop statement:     repeat <code> until <condition> end
-No boolean operators.
-Only integer variables.
+## Syntax
+**input**: `read`  
+**output**: `write`  
+**if statements**: `if <statement> then <code> end`  
+**if-else statements**: `if <statement> then <code> else <code> end`  
+**loop statement**: `repeat <code> until <condition> end`  
+**NO boolean operators**.  
+Only integer variables.  
 No arrays, or functions.
 
 
@@ -22,6 +21,10 @@ The program outputs TARGET INDEPENDENT assembly code. i.e. it doesn't pertain to
 Stack: (congrats if you actually read this far lol)
 scanner - built using lex.
 parser - built using YACC.
-AST, IR, codegen:  C. (custom code)
+AST, IR, Codegen - C. (custom code)
+VM - C
 
-The 
+## Update (02/10/26) 
+I'm currently building a VM to actually execute code. The problem is, the code is executing, but the outputs are horrendous, to say the least
+
+## Next Due: 04/10/26
