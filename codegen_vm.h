@@ -11,3 +11,22 @@
 int generate_bytecode(IRInstruction *ir, const char *out_path);
 
 #endif /* CODEGEN_VM_H */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

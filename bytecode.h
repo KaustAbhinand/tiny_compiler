@@ -161,4 +161,5 @@ static inline uint16_t enc_trap(uint16_t trapvect8) {
     return (uint16_t)((OP_TRAP << 12) | (trapvect8 & 0xFF));
 }
 
+
 #endif /* BYTECODE_H */

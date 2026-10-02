@@ -279,7 +279,8 @@ static void pass2(IRInstruction *ir) {
                 /* condition true: result = 1 */
                 uint16_t true_addr = (uint16_t)code_len;
                 emit_word(enc_ldi(R0, 1));
- 
+
+
                 /* patch the JMP that skips the true-case to land here.
                  * Same PC_START offset as IR_GOTO above — JMP targets are
                  * absolute addresses in the VM's real address space, not

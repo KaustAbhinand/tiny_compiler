@@ -15,4 +15,8 @@ int ld_img(const char *fname);
 /* Run until a HALT trap (or an unrecoverable error) stops execution. */
 void run(void);
 
+
+
+
+
 #endif /* VM_H */
