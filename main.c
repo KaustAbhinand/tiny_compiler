@@ -17,8 +17,9 @@ int main(void) {
         //print_ast(root, 0);
 	generate_ir(root);
 	//printf("--------Intermidiate Representation:----------\n");
-	//print_ir();
+	print_ir();
 	generate_code(ir_head);
+	generate_bytecode(ir_head, "out.tbc");
     } else {
         printf("Parsing failed.\n");
     }

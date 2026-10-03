@@ -91,7 +91,7 @@ static uint16_t var_slot(const char *name) {
     }
     strncpy(vars[nvars].name, name, sizeof(vars[nvars].name) - 1);
     vars[nvars].name[sizeof(vars[nvars].name) - 1] = '\0';
-    vars[nvars].slot = (uint16_t)nvars;
+    vars[nvars].slot = (uint16_t)(VAR_START + nvars); /* Offset by the start address (0x0100) */
     return vars[nvars++].slot;
 }
 

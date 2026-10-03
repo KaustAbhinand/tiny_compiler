@@ -66,8 +66,8 @@ enum {
 
 /* ---------------- Memory layout ---------------- */
 #define MEM_SIZE   (UINT16_MAX + 1)  /* 65,536 words */
-#define PC_START   0x0000            /* programs load here.
-
+#define PC_START   0x0000            /* programs load here.*/
+#define VAR_START 0x0100             /* Program variables are loaded here. */
 /* ============================================================
  * Bit-field extraction macros
  * ============================================================ */
