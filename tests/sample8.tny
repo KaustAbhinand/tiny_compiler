@@ -1,0 +1,4 @@
+read n;
+d := n + 1;
+write n;
+end
