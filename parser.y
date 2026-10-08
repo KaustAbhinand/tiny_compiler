@@ -3,7 +3,6 @@
 %code requires {
   #include "ast.h"
 }
-
 %{
 
 #include <stdio.h>
@@ -63,12 +62,12 @@ simple_stmt:
 struct_stmt:
 	   IF exp THEN stmt_seq END { $$ = make_if($2, $4, NULL);}
    |       IF exp THEN stmt_seq ELSE stmt_seq END  { $$ = make_if($2, $4, $6);}
-   |       REPEAT stmt_seq UNTIL exp SEMI { $$ = make_repeat($2, $4); }
+   |       REPEAT stmt_seq UNTIL exp SEMI END { $$ = make_repeat($2, $4); }
    ; 
 
 
 exp
-    : simple_exp             { $$ = $1; }
+    : simple_exp             	{ $$ = $1; }
     | simple_exp LT simple_exp  { $$ = make_op('<', $1, $3); }
     | simple_exp GT simple_exp  { $$ = make_op('>', $1, $3); }
     | simple_exp EQ simple_exp  { $$ = make_op('=', $1, $3); }
