@@ -2,6 +2,8 @@ read a;
 read b;
 if a > b then
     write a;
+end
 if b >= a then
     write b;
+end
 end
