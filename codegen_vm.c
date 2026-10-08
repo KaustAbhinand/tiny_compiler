@@ -258,7 +258,7 @@ static void pass2(IRInstruction *ir) {
                 break;
 
             case IR_WRITE:
-                load_operand(ins->arg1, R0);
+                load_operand(ins->result, R0);
                 emit_word(enc_trap(TRAP_WRITE));
                 break;
 
