@@ -1,9 +1,10 @@
 This is a compiler for the language: TINY, a subset of C.
 
-Documentation of TINY
-Every line is to be terminated with a semicolon. (;).
-The program needs to be terminated with the keyword "end". The "end" keyword must not be followed by a semicolon.
-Variables are declared by assigning values to them directly. They are block scoped. Each block is defined by an indentation, preferably using tab space for each block.
+## Documentation
+- Every line is to be terminated with a semicolon. (;).
+- The program needs to be terminated with the keyword "end".
+- The "end" keyword must not be followed by a semicolon.
+- Variables are declared by assigning values to them directly. They are block scoped. Each block is defined by an indentation, preferably using tab space for each block.
 
 ## Syntax
 **input**: `read`  
@@ -11,20 +12,23 @@ Variables are declared by assigning values to them directly. They are block scop
 **if statements**: `if <statement> then <code> end`  
 **if-else statements**: `if <statement> then <code> else <code> end`  
 **loop statement**: `repeat <code> until <condition> end`  
+**Comments**: `{ enclosed in these }`
+
 **NO boolean operators**.  
 Only integer variables.  
 No arrays, or functions.
 
 
-The program outputs TARGET INDEPENDENT assembly code. i.e. it doesn't pertain to any ISA. ISA specific code, will be added very soon.
-
 Stack: (congrats if you actually read this far lol)
-scanner - built using lex.
-parser - built using YACC.
-AST, IR, Codegen - C. (custom code)
-VM - C
 
-## Update (02/10/26) 
-I'm currently building a VM to actually execute code. The problem is, the code is executing, but the outputs are horrendous, to say the least
+- scanner: built using lex.
+- parser: built using YACC.
+- AST, IR, Codegen: C. (custom code)
+- VM: C
 
-## Next Due: 04/10/26
+## Build steps:
+- Fork and clone the repo
+- chmod +x build.sh
+- chmod +x tinyshell.sh
+- ./tinyshell.sh
+- Just enter the file name/path. The program stays in the loop until CTRL+C.
