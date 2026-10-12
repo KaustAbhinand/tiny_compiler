@@ -4,5 +4,6 @@ repeat
     sum := sum + n;
     n := n - 1;
 until n == 0;
+end
 write sum;
 end
