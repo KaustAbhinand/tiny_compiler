@@ -1,0 +1,3 @@
+{ Some intentionally incorrect code (No "end") }
+read n;
+write n;
